@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5;
+  }
+  
+  .like-container {
+    position: relative;
+    padding: 10px;
+  }
+  
+  .like-button {
+    background-color: #f0f2f5;
+    border: 1px solid #d1d1d1;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .like-button:hover {
+    background-color: #e0e1e3;
+  }
+  
+  .reaction-popup {
+    position: absolute;
+    bottom: 55px;
+    left: 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 50px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .reaction-popup div {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+  }
+  
+  .reaction-popup div:hover {
+    transform: scale(1.5);
+  }
+  
+  .like-container:hover .reaction-popup {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
