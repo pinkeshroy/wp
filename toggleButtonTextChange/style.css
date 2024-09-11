@@ -58,6 +58,6 @@ body {
   transform: translateX(24px);
 }
 
-.toggle-container:focus-within + .toggle .toggleCheckbox:checked ~ .toggle-text {
+.toggle-container:focus-within .toggle .toggleCheckbox:checked ~ .toggle-text {
   color: #004ab9;
 }
